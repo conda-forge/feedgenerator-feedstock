@@ -6,7 +6,7 @@ package:
 
 source:
     fn: feedgenerator-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
     md5: f542f4098dbb5c63a94c88cbfc727778
 
 build:
