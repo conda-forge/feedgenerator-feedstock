@@ -1,4 +1,4 @@
-{% set version = "1.8" %}
+{% set version = "1.9" %}
 
 package:
     name: feedgenerator
@@ -7,7 +7,7 @@ package:
 source:
     fn: feedgenerator-{{ version }}.tar.gz
     url: https://pypi.python.org/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
-    md5: 1ca75c35334f82b9aa51f38b20b714e6
+    md5: f542f4098dbb5c63a94c88cbfc727778
 
 build:
     number: 0
