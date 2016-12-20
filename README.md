@@ -11,6 +11,18 @@ Summary: Standalone version of django.utils.feedgenerator, compatible with Py3k
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/feedgenerator-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/feedgenerator-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/feedgenerator-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/feedgenerator-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/feedgenerator-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/feedgenerator-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/feedgenerator/badges/version.svg)](https://anaconda.org/conda-forge/feedgenerator)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/feedgenerator/badges/downloads.svg)](https://anaconda.org/conda-forge/feedgenerator)
+
 Installing feedgenerator
 ========================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `feedgenerator` available on your 
 ```
 conda search feedgenerator --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/feedgenerator-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/feedgenerator-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/feedgenerator-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/feedgenerator-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/feedgenerator-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/feedgenerator-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/feedgenerator/badges/version.svg)](https://anaconda.org/conda-forge/feedgenerator)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/feedgenerator/badges/downloads.svg)](https://anaconda.org/conda-forge/feedgenerator)
 
 
 Updating feedgenerator-feedstock
