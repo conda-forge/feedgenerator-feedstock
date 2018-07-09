@@ -1,40 +1,39 @@
 {% set version = "1.9" %}
 
 package:
-    name: feedgenerator
-    version: {{ version }}
+  name: feedgenerator
+  version: {{ version }}
 
 source:
-    fn: feedgenerator-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
-    md5: f542f4098dbb5c63a94c88cbfc727778
+  url: https://pypi.io/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
+  sha256: 5ae05daa9cfa47fa406ee4744d0b7fa1c8a05a7a47ee0ad328ddf55327cfb106
 
 build:
-    noarch: python
-    number: 1
-    script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - pytz
-        - six
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - pytz
+    - six
 
 test:
-    imports:
-        - feedgenerator
-        - feedgenerator.django
-        - feedgenerator.django.utils
+  imports:
+    - feedgenerator
+    - feedgenerator.django
+    - feedgenerator.django.utils
 
 about:
-    home: https://github.com/dmdm/feedgenerator-py3k.git
-    license: BSD-3-Clause
-    summary: Standalone version of django.utils.feedgenerator, compatible with Py3k
+  home: https://github.com/dmdm/feedgenerator-py3k.git
+  license: BSD-3-Clause
+  summary: Standalone version of django.utils.feedgenerator, compatible with Py3k
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - moorepants
+  recipe-maintainers:
+    - ocefpaf
+    - moorepants
