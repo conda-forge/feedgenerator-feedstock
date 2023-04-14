@@ -1,38 +1,43 @@
+{% set name = "feedgenerator" %}
 {% set version = "2.1.0" %}
 
 package:
-  name: feedgenerator
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/feedgenerator/feedgenerator-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/feedgenerator-{{ version }}.tar.gz
   sha256: f075f23f28fd227f097c36b212161c6cf012e1c6caaf7ff53d5d6bb02cd42b9d
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
+    - setuptools >=40.6.0
+    - wheel
+    - poetry-core
     - pip
   run:
-    - python >=3.6
-    - pytz
-    - six
+    - python >=3.7
+    - pytz >=0a
 
 test:
   imports:
     - feedgenerator
-    - feedgenerator.django
-    - feedgenerator.django.utils
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/dmdm/feedgenerator-py3k.git
+  home: https://github.com/getpelican/feedgenerator
+  summary: Standalone version of django.utils.feedgenerator
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: Standalone version of django.utils.feedgenerator, compatible with Py3k
 
 extra:
   recipe-maintainers:
