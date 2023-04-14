@@ -3,11 +3,11 @@ About feedgenerator-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/feedgenerator-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/dmdm/feedgenerator-py3k.git
+Home: https://github.com/getpelican/feedgenerator
 
 Package license: BSD-3-Clause
 
-Summary: Standalone version of django.utils.feedgenerator, compatible with Py3k
+Summary: Standalone version of django.utils.feedgenerator
 
 Current build status
 ====================
