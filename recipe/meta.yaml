@@ -18,8 +18,6 @@ requirements:
   host:
     - python >=3.7
     - setuptools >=40.6.0
-    - wheel
-    - poetry-core
     - pip
   run:
     - python >=3.7
@@ -28,6 +26,8 @@ requirements:
 test:
   imports:
     - feedgenerator
+    - feedgenerator.django
+    - feedgenerator.django.utils
   commands:
     - pip check
   requires:
