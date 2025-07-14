@@ -1,5 +1,6 @@
 {% set name = "feedgenerator" %}
 {% set version = "2.2.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -11,13 +12,13 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=40.6.0
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
