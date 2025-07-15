@@ -10,17 +10,20 @@ source:
   sha256: 2976f6ccc5989a967202da343ea145c21aedabbe0035c7088d64ba0aa9725a60
 
 build:
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - python-tzdata  # [win]
+    - __unix  # [unix]
+    - __win   # [win]
 
 test:
   imports:
@@ -31,7 +34,7 @@ test:
     - pip check
   requires:
     - pip
-    - python
+    - python {{ python_min }}
 
 about:
   home: https://github.com/getpelican/feedgenerator
