@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - pytz >=0a
+    - tzdata  # [win]
 
 test:
   imports:
