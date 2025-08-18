@@ -1,5 +1,5 @@
 {% set name = "feedgenerator" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/feedgenerator-{{ version }}.tar.gz
-  sha256: 2976f6ccc5989a967202da343ea145c21aedabbe0035c7088d64ba0aa9725a60
+  sha256: 0eaa955f1f0bcb5b87ac195af740f06ff9fff4a40ed30b8a7c6bbebb264d4dd1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,6 +20,7 @@ requirements:
     - hatchling
     - pip
   run:
+    - tzdata
     - python >={{ python_min }}
     - python-tzdata  # [win]
     - __unix  # [unix]
